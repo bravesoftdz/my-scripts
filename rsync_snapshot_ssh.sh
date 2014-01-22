@@ -130,7 +130,7 @@ if [ ! -s "$0.err" ]; then
   else
 
     # si existe el directorio backup.2 lo borro
-    rm -rf $DES_PATH/backup.2
+    ssh $SSH_HOST $SSH_OPTS rm -rf $DES_PATH/backup.2
 
     # si existe el directorio backup.1 lo muevo a backup.2
     if [ -d "$DES_PATH/backup.1" ]; then
